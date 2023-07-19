@@ -7,13 +7,11 @@ import { MatDrawer } from '@angular/material/sidenav';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'emias';
+  public title = 'EMIAS (как я понял принцип работы)';
   public drawer !: MatDrawer;
   public setSidenav(drawer: MatDrawer) {
     this.drawer = drawer;
   }
-  // public search(event: Event) : void {
-  //   const value = (event.target as HTMLInputElement).value
-  //   console.log(value);
-  // } 
+
+  
 }

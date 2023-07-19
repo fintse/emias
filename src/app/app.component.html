@@ -1,3 +1,7 @@
 <app-header [t]="title" [d]="drawer"></app-header>
-<app-sidebar (setSidenavControl)="setSidenav($event)"></app-sidebar>
-<!-- <input type="text" (input)="search($event)"> -->
+<app-sidebar (setSidenavControl)="setSidenav($event)">
+  <ng-template #mainContent></ng-template>
+  <h3>Зак</h3>
+  <h3>Зам</h3>
+  <h3>Зар</h3>
+</app-sidebar>
