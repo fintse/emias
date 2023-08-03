@@ -1,7 +1,8 @@
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
 
-export interface IPatients {
+export interface IPatient {
+  [x: string]: any;
   "_id": string;
   "index": number;
   "age": number;
@@ -104,5 +105,5 @@ export const patients = [
     }
   ]
 
-  export const patients$: Observable<IPatients[]> = of(patients)
+  export const patients$: Observable<IPatient[]> = of(patients)
   .pipe(delay(1000));

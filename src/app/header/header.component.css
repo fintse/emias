@@ -1,15 +1,4 @@
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+mat-toolbar {
+    background-color: var(--primary);
+    color: var(--white);
 }
-
-.header-container__search  {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.header-container__search input {
-    margin-left: 20px;
-}
-

@@ -12,8 +12,6 @@ export class HeaderComponent {
     console.log(value);
   } 
   // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-  public searchLabel: string = 'поиск пациента происходит с помощью сервиса ЕРП (ищи 111)';
-
   @Input()
   public t!: string;
   

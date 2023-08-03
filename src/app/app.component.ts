@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
-import { MatDrawer } from '@angular/material/sidenav';
-import { IPatients, patients$ } from './mock'
+import { IPatient, patients$ } from './mock'
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,13 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements AfterViewChecked {
   public title = 'EMIAS (как я понял принцип работы)';
-  public drawer !: MatDrawer;
-  public setSidenav(drawer: MatDrawer) {
-    this.drawer = drawer;
-  }
-  public patients$: Observable<IPatients[]> = patients$;
+  public searchInputValue = 'Ищем пациента, используя сервис ЕРП (name или id)';
+  public searchText = '';
+
+  public patients$: Observable<IPatient[]> = patients$;
 
   public ngAfterViewChecked(): void {
     this.patients$ = patients$;
   }
+
+  search({target} : Event) {
+    this.searchText = (target as HTMLInputElement).value;
+  }
+  
 }
