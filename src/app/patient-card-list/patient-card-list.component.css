@@ -1,0 +1,15 @@
+.patients-list-element {
+    border-radius: 0px;
+    box-shadow: none;
+    transition: 0.15s;
+}
+
+.patients-list-element:hover {
+    cursor: pointer;
+    background-color: rgba(30, 122, 122, 0.4)
+
+}  
+
+.patients-list-element mat-card-content span + span {
+    display: block;
+}

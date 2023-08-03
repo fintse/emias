@@ -1,0 +1,13 @@
+<mat-card class="patients-list-element">
+    <mat-card-header>
+      <mat-card-title>{{patient.name}}, возраст: {{patient.age}}</mat-card-title>
+      <mat-card-subtitle>id: {{patient.index}}</mat-card-subtitle>
+      <!-- <input [(ngModel)]="patient.name" type="text"> -->
+      <!-- <input (input)="changeName($event)" [value]="patient.name" type="text"> -->
+
+    </mat-card-header>
+    <mat-card-content>
+        <span *ngIf="patient.email">Email: {{patient.email}}</span>
+        <span *ngIf="patient.registered">Дата регистрации: {{patient.registered}}</span>
+    </mat-card-content>
+  </mat-card>
